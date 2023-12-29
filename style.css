@@ -1,0 +1,189 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+}
+
+.items {
+  display: flex;
+  height: 51px;
+  background-color: black;
+  color: white;
+  align-items: center;
+}
+
+.items li {
+  list-style: none;
+  margin: 0 10px;
+}
+
+.items li:nth-child(1) {
+  display: flex;
+  align-items: center;
+  margin: 0 30px;
+}
+
+.items li img {
+  width: 40px;
+  padding-right: 5px;
+}
+
+.container {
+  min-height: 75vh;
+  width: 55%;
+  background-color: black;
+  color: white;
+  margin: 9px auto;
+  background-image: url("bg.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 30px;
+}
+
+.songlist {
+  margin: 15px 0;
+  height: 400px;
+  max-width: 300px;
+  overflow: auto;
+}
+.songlist::-webkit-scrollbar {
+  width: 12px; /* Set the width of the scrollbar */
+}
+
+.songlist::-webkit-scrollbar-thumb {
+  background-color: rgba(
+    159,
+    150,
+    150,
+    0.138
+  ); /* Set the color of the scrollbar thumb (the draggable part) */
+  border-radius: 6px; /* Optional: Set border radius for a rounded appearance */
+}
+
+.songlist::-webkit-scrollbar-track {
+  background-color: #000; /* Set the color of the scrollbar track (the non-draggable part) */
+}
+.songlist .song {
+  max-width: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+.songlist .song .songdetails {
+  display: flex;
+  align-items: center;
+}
+.songlist .song .songdetails img {
+  width: 40px;
+}
+.songlist .song .songdetails span {
+  margin-left: 5px;
+}
+
+#gif{
+  transition: opacity 0.3s;
+}
+
+.bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: sticky;
+  bottom: 0;
+  height: 15vh;
+  background-color: black;
+}
+
+.bottom img {
+  position: absolute;
+  left: 23vw;
+  width: 30px;
+  height: 20px;
+  opacity: 0;
+}
+
+#songname{
+  position: absolute;
+  left: 27vw;
+  top: 7vh;
+  opacity: 0;
+  color: white;
+}
+.bottom .controls {
+  color: #fff;
+  font-size: 30px;
+  margin-top: 10px;
+}
+
+.controls i {
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.controls i:hover {
+  color: #808080;
+}
+/* For WebKit browsers (Chrome, Safari) */
+input[type="range"] {
+  -webkit-appearance: none;
+  width: 55%;
+  background: transparent;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8px;
+  background: #000;
+  border-radius: 4px;
+  border: 2px solid #808080; /* Add a border to the track for better visibility */
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  background: #808080;
+  border-radius: 50%;
+  margin-top: -4px;
+  border: 2px solid #fff;
+}
+
+/* For Firefox */
+input[type="range"]::-moz-range-track {
+  width: 100%;
+  height: 8px;
+  background: #000;
+  border-radius: 4px;
+  border: 2px solid #808080;
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  background: #808080;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+/* For Microsoft Edge */
+input[type="range"]::-ms-track {
+  width: 100%;
+  height: 8px;
+  background: #000;
+  border-radius: 4px;
+  border: 2px solid #808080;
+}
+
+input[type="range"]::-ms-thumb {
+  width: 16px;
+  height: 16px;
+  background: #808080;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
